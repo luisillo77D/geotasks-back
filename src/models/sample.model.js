@@ -27,11 +27,13 @@ const sampleSchema = new mongoose.Schema(
         required:true,
         default:0
     },
-    LatLng:{
-        coordinates:{
-            type:[Number],
-            required:true
-        }
+    latitude:{
+        type:Number,
+        required:true
+    },
+    longitude:{
+        type:Number,
+        required:true
     }
 
 
