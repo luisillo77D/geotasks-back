@@ -30,7 +30,7 @@ export const createSample = async (req, res) => {
   const saveSample = await newSample.save();
   res.json(saveSample);
   } catch (error) {
-    
+    console.log(error);
   }
 };
 //metodo para obtener un sample por su id
@@ -41,7 +41,7 @@ export const getSample = async (req, res) => {
   res.json(sample);
 
   } catch (error) {
-    
+    console.log(error);
   }
 };
 
@@ -53,7 +53,7 @@ export const updateSamples = async (req, res) => {
     if (!sample) return res.status(404).json({ message: "sample not found" });
     res.json(sample);
   } catch (error) {
-    
+    console.log(error);
   }
 };
 
@@ -63,7 +63,7 @@ export const deleteSamples = async (req, res) => {
   if (!sample) return res.status(404).json({ message: "sample not found" });
   return res.sendStatus(204);
   } catch (error) {
-    
+    console.log(error);
   }
 };
 //metodo para obtener los sample por su status
@@ -74,6 +74,6 @@ export const getSamplesChecked = async (req, res) => {
       }).populate('user','username')
       res.json(samples);
     } catch (error) {
-      
+      console.log(error);
     }
 }
