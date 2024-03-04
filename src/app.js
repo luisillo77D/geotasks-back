@@ -3,6 +3,7 @@ import morgan from "morgan";
 import authRoutes from "./routes/auth.routes.js";
 import cookieParser from "cookie-parser";
 import tasksRoutes from "./routes/samples.routes.js";
+import samplesOkRoutes from "./routes/sampleOk.routes.js";
 import cors from "cors";
 
 const app = express();
@@ -17,5 +18,6 @@ app.use(cookieParser());
 
 app.use("/api", authRoutes);
 app.use("/api", tasksRoutes);
+app.use("/api", samplesOkRoutes);
 
 export default app;
