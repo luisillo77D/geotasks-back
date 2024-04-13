@@ -9,7 +9,7 @@ import cors from "cors";
 const app = express();
 
 app.use(cors({
-    origin:['https://0vssxkr7-5173.usw3.devtunnels.ms','http://localhost:5173','https://geo-tasks-mu.vercel.app','https://geo-tasks-luisillo77ds-projects.vercel.app'],
+    origin:['https://0vssxkr7-5173.usw3.devtunnels.ms','http://localhost:5173','http://localhost:4173','https://geo-tasks-mu.vercel.app','https://geo-tasks-luisillo77ds-projects.vercel.app'],
     credentials:true
 }));
 app.use(morgan("dev"));
