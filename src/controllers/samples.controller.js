@@ -17,7 +17,7 @@ export const getallSamples = async (req, res) => {
 //metodo para crear samples
 export const createSample = async (req, res) => {
   try {
-    const { title, texture, description, date,latitude,longitude } = req.body;
+    const { title, texture, description, date,latitude,longitude,images } = req.body;
   const newSample = new Sample({
     title,
     texture,
@@ -25,7 +25,8 @@ export const createSample = async (req, res) => {
     date,
     user: req.user.id,
     latitude,
-    longitude
+    longitude,
+    images
   });
   const saveSample = await newSample.save();
   res.json(saveSample);

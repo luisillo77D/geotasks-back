@@ -34,8 +34,10 @@ const sampleSchema = new mongoose.Schema(
     longitude:{
         type:Number,
         required:true
-    }
-
+    },
+    images:[{
+        type:String
+    }]
 
   },
   {
