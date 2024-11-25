@@ -1,7 +1,9 @@
 import jwt from "jsonwebtoken";
 import { secret } from "../config.js";
 export const authRequired = (req, res, next) => {
-  const { token } = req.cookies;
+  //obtener el token del header
+  const token = req.headers["authorization"];
+  console.log(token);
 
   if (!token) return res.status(401).json({ message: "no token auth" });
 

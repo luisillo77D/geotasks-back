@@ -1,0 +1,20 @@
+config:
+  target: "http://localhost:3000"  # Dirección de tu API
+  phases:
+    - duration: 60    # Duración de la prueba en segundos
+      arrivalRate: 10 # Número de solicitudes por segundo
+scenarios:
+  - flow:
+      - post:
+          url: "api/samples" # Endpoint que quieres probar
+          json:
+            title: "Prueba de carga"
+            texture: "Arenosa"
+            description: "Esta es una prueba de rendimiento"
+            date: "2024-03-01T05:52:06.548+00:00"
+            latitude: "23.634501"
+            longitude: "-102.552784"
+            user: "60f3b1b3b3b3b3b3b3b3b3b3"
+            images:
+              - "image1.jpg"
+              - "image2.jpg"
